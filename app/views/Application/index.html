@@ -1,6 +1,16 @@
 #{extends 'main.html' /}
 #{set title:'GeekTic' /}
 
+#{set 'moreStyles'}
+<style>
+</style>
+#{/set}
+
 <form class="form-search" action="@like()">
+    <label>What are you searching for: </label>
     <input type="search" name="q" class="search-query"/>
+    <button type="submit" class="btn">Find love!</button>
 </form>
+
+
+<img class="img-rounded" src="@{'/public/images/geeklove.jpg'}" />
