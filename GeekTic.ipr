@@ -32,7 +32,7 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
-  <component name="IdProvider" IDEtalkID="AAFBEC9371658592F63E15015C9A8961" />
+  <component name="IdProvider" IDEtalkID="238C65441C8242FC758BAD7CA5F1F153" />
   <component name="InspectionProjectProfileManager">
     <profiles>
       <profile version="1.0" is_locked="false">
@@ -58,7 +58,7 @@
     <output url="file://$APPLICATION_HOME_DIR$/bin/tmp" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="" vcs="Git" />
   </component>
 </project>
 
