@@ -3,3 +3,4 @@
 require:
     - play
     - org.easytesting -> fest-assert 1.4
+    - com.google.guava -> guava 14.0-rc1

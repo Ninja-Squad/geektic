@@ -1,8 +1,12 @@
 package jobs;
 
+import com.google.common.base.Predicate;
+import models.Geek;
 import org.junit.Test;
 
-import static org.fest.assertions.Assertions.assertThat;
+import java.util.Set;
+
+import static org.fest.assertions.Assertions.*;
 
 /**
  * TODO insert class documentation here

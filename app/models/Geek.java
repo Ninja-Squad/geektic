@@ -1,5 +1,6 @@
 package models;
 
+import com.google.common.base.Objects;
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -39,7 +40,7 @@ public class Geek {
         return nom;
     }
 
-    protected void setNom(String nom) {
+    public void setNom(String nom) {
         this.nom = nom;
     }
 
@@ -47,7 +48,7 @@ public class Geek {
         return prenom;
     }
 
-    protected void setPrenom(String prenom) {
+    public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
 
@@ -55,7 +56,7 @@ public class Geek {
         return email;
     }
 
-    protected void setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -63,7 +64,7 @@ public class Geek {
         return ville;
     }
 
-    protected void setVille(String ville) {
+    public void setVille(String ville) {
         this.ville = ville;
     }
 
@@ -71,7 +72,7 @@ public class Geek {
         return like1;
     }
 
-    protected void setLike1(String like1) {
+    public void setLike1(String like1) {
         this.like1 = like1;
     }
 
@@ -79,7 +80,7 @@ public class Geek {
         return like2;
     }
 
-    protected void setLike2(String like2) {
+    public void setLike2(String like2) {
         this.like2 = like2;
     }
 
@@ -87,7 +88,7 @@ public class Geek {
         return like3;
     }
 
-    protected void setLike3(String like3) {
+    public void setLike3(String like3) {
         this.like3 = like3;
     }
 
@@ -95,7 +96,7 @@ public class Geek {
         return hate1;
     }
 
-    protected void setHate1(String hate1) {
+    public void setHate1(String hate1) {
         this.hate1 = hate1;
     }
 
@@ -103,7 +104,22 @@ public class Geek {
         return hate2;
     }
 
-    protected void setHate2(String hate2) {
+    public void setHate2(String hate2) {
         this.hate2 = hate2;
+    }
+
+    @Override
+    public String toString() {
+        return Objects.toStringHelper(this)
+                      .add("nom", nom)
+                      .add("prenom", prenom)
+                      .add("email", email)
+                      .add("ville", ville)
+                      .add("like1", like1)
+                      .add("like2", like2)
+                      .add("like3", like3)
+                      .add("hate1", hate1)
+                      .add("hate2", hate2)
+                      .toString();
     }
 }

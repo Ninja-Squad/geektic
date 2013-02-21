@@ -1,5 +1,6 @@
 package jobs;
 
+import com.google.common.base.Charsets;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import models.Geek;
@@ -8,7 +9,6 @@ import play.jobs.OnApplicationStart;
 
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
@@ -26,7 +26,7 @@ public class DataLoader extends Job<Void> {
         DataLoader.geeks =
             new GsonBuilder().create()
                              .fromJson(new InputStreamReader(DataLoader.class.getResourceAsStream("codestory2013.json"),
-                                                             StandardCharsets.UTF_8),
+                                                             Charsets.UTF_8),
                                        geekTypeToken);
     }
 
