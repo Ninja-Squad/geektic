@@ -1,6 +1,23 @@
 #{extends 'main.html' /}
 #{set title:'GeekTic' /}
 
-<form class=""form-search" action="@{Application.like()}">
-    <label>I like : </label><input type="search" name="q" class="search-query"/></label>
-</form>
+#{set 'moreStyles'}
+<style>
+    body {
+        color:black;
+        background-image:url("/public/images/geeklove.jpg");
+        background-size: 100%;
+    }
+
+</style>
+#{/set}
+<div class="container">
+    <div class="hero-unit">
+        <h1>You love geeks, go find them</h1>
+        <form class="form-search" action="@like()">
+            <label>What are you searching for: </label>
+            <input type="search" name="q" class="search-query"/>
+            <button type="submit" class="btn">Find love!</button>
+        </form>
+    </div>
+</div>
