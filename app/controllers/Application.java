@@ -1,5 +1,6 @@
 package controllers;
 
+import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import jobs.DataLoader;
@@ -7,7 +8,6 @@ import models.Geek;
 import play.mvc.Controller;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -20,13 +20,13 @@ public class Application extends Controller {
     public static void like(String q) {
         Set<String> likes = splitQuestion(q);
         List<Geek> geeks = findGeeksByLike(DataLoader.geeks(), likes);
-        render("geeks.html", geeks);
+        render("Application/geeks.html", geeks);
     }
 
     public static void hate(String q) {
         Set<String> hates = splitQuestion(q);
         List<Geek> geeks = findGeeksByHate(DataLoader.geeks(), hates);
-        render("geeks.html", geeks);
+        render("Application/geeks.html", geeks);
     }
 
     protected static List<Geek> findGeeksByLike(List<Geek> geeks, Set<String> likes) {
@@ -42,7 +42,14 @@ public class Application extends Controller {
     }
 
     protected static Set<String> splitQuestion(String question) {
-        return new HashSet<String>(Arrays.asList(question.split("\\s")));
+        String[] split = question.split("\\s");
+        return FluentIterable.from(Arrays.asList(split))
+                             .transform(new Function<String, String>() {
+                                 @Override
+                                 public String apply(String s) {
+                                     return s.toLowerCase();
+                                 }
+                             }).toSet();
     }
 
     private static class LikePredicate implements Predicate<Geek> {
@@ -54,10 +61,14 @@ public class Application extends Controller {
 
         @Override
         public boolean apply(Geek geek) {
-            return this.likes.contains(geek.getLike1())
-                   || this.likes.contains(geek.getLike2())
-                   || this.likes.contains(geek.getLike3());
+            return this.likes.contains(safeLowerCase(geek.getLike1()))
+                   || this.likes.contains(safeLowerCase(geek.getLike2()))
+                   || this.likes.contains(safeLowerCase(geek.getLike3()));
         }
+    }
+
+    private static String safeLowerCase(String s) {
+        return s == null ? null : s.toLowerCase();
     }
 
     private static class HatePredicate implements Predicate<Geek> {

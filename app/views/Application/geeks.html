@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'GeekTic' /}
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Ville</th>
+            <th>Likes</th>
+            <th>Hates</th>
+        </tr>
+    </thead>
+    <tbody>
+        #{list geeks, as: 'geek'}
+            <tr>
+                <td>${geek.prenom} ${geek.nom}</td>
+                <td>${geek.ville}</td>
+                <td>${geek.like1} ${geek.like2} ${geek.like3}</td>
+                <td>${geek.hate1} ${geek.hate2}</td>
+            </tr>
+        #{/list}
+    </tbody>
+</table>

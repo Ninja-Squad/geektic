@@ -1,6 +1,6 @@
 #{extends 'main.html' /}
 #{set title:'GeekTic' /}
 
-<form class=""form-search" action="@like()">
-    <input type="search" name="q" class="search-query"/>
+<form class=""form-search" action="@{Application.like()}">
+    <label>I like : </label><input type="search" name="q" class="search-query"/></label>
 </form>

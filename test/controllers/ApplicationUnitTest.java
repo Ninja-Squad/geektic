@@ -23,11 +23,11 @@ public class ApplicationUnitTest {
     @Before
     public void setUp() {
         likesJavaAndHateRuby = new Geek();
-        likesJavaAndHateRuby.setLike1("java");
+        likesJavaAndHateRuby.setLike1("Java");
         likesJavaAndHateRuby.setHate2("ruby");
 
         likesRubyAndHateJava = new Geek();
-        likesRubyAndHateJava.setLike2("ruby");
+        likesRubyAndHateJava.setLike2("Ruby");
         likesRubyAndHateJava.setHate1("java");
 
         geeks = Arrays.asList(likesJavaAndHateRuby, likesRubyAndHateJava);
@@ -35,7 +35,7 @@ public class ApplicationUnitTest {
 
     @Test
     public void splitQuestionShouldSplit() {
-        String q = "java lambda";
+        String q = "Java Lambda";
         assertThat(Application.splitQuestion(q)).isEqualTo(Sets.newHashSet("java", "lambda"));
     }
 
