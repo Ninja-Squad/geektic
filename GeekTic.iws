@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d69d805b-85a5-4241-9e6b-e5232102ebdf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeekTic.iml" afterPath="$PROJECT_DIR$/GeekTic.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeekTic.ipr" afterPath="$PROJECT_DIR$/GeekTic.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/application.conf" afterPath="$PROJECT_DIR$/conf/application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/dependencies.yml" afterPath="$PROJECT_DIR$/conf/dependencies.yml" />
-    </list>
+    <list default="true" id="d69d805b-85a5-4241-9e6b-e5232102ebdf" name="Default" comment="" />
     <ignored path="GeekTic.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="d69d805b-85a5-4241-9e6b-e5232102ebdf" time="1361471322516" ignored="false" />
@@ -17,6 +12,8 @@
     <file path="/Application.java" changelist="d69d805b-85a5-4241-9e6b-e5232102ebdf" time="1361473104980" ignored="false" />
     <file path="/Dummy.txt" changelist="d69d805b-85a5-4241-9e6b-e5232102ebdf" time="1361474963547" ignored="false" />
     <file path="/application.conf" changelist="d69d805b-85a5-4241-9e6b-e5232102ebdf" time="1361475549069" ignored="false" />
+    <file path="$PROJECT_DIR$/precompiled/templates/from_play/framework/templates/errors/404.xml" changelist="d69d805b-85a5-4241-9e6b-e5232102ebdf" time="1361475954792" ignored="false" />
+    <file path="$PROJECT_DIR$/precompiled/templates/from_play/framework/templates/errors/500.xml" changelist="d69d805b-85a5-4241-9e6b-e5232102ebdf" time="1361475954792" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +123,7 @@
       <file leaf-file-name="application.conf" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf/application.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="218" column="60" selection-start="6680" selection-end="6680" vertical-scroll-proportion="0.80099505">
+            <state line="209" column="21" selection-start="6370" selection-end="6370" vertical-scroll-proportion="0.5771144">
               <folding />
             </state>
           </provider>
@@ -630,7 +627,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="60" selection-start="6680" selection-end="6680" vertical-scroll-proportion="0.80099505">
+        <state line="209" column="21" selection-start="6370" selection-end="6370" vertical-scroll-proportion="0.5771144">
           <folding />
         </state>
       </provider>
